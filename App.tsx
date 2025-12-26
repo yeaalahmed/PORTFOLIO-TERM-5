@@ -1,26 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
+import MakeAndTakes from './components/MakeAndTakes';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ChatWidget from './components/ChatWidget';
+import PedalGeneratorSection from './components/PedalGeneratorSection';
 import { PORTFOLIO_OWNER } from './constants';
 
 const App: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <div className="min-h-screen bg-vintage-cream text-vintage-black relative">
-      <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      <Navbar />
       
       <main className="flex flex-col">
         <Hero />
         <Projects />
+        <MakeAndTakes />
+        <PedalGeneratorSection />
         <Skills />
         <Contact />
       </main>

@@ -1,4 +1,4 @@
-import { Project, Skill, Experience } from './types';
+import { Project, Skill, Experience, MakeAndTakeItem } from './types';
 
 export const PORTFOLIO_OWNER = "Yeaal Takian Ahmed";
 export const PORTFOLIO_TITLE = "Mechanical Engineering Student";
@@ -11,8 +11,8 @@ export const PROJECTS: Project[] = [
     title: 'Automata',
     description: 'A kinetic automaton exploring mechanical engineering and art by converting rotary motion into rhythmic linear displacement.',
     longDescription: 'This kinetic automaton explores the intersection of mechanical engineering and interactive art by converting manual rotary motion into rhythmic linear displacement. Utilizing a hand-cranked axle and a dual-cam system, the mechanism drives a vertical follower to create the lifelike bobbing and rotation of the central "eye" element. Constructed from cardboard and timber, the project required precise calibration of cam geometry and friction management to ensure fluid movement. This prototype demonstrates my proficiency in mechanical design, material prototyping, and the creative application of classical physics to produce an engaging, tactile user experience.',
-    tags: ['Kinematics', 'Rapid Prototyping', 'Mechanism Design', 'Laser Cutting'],
-    imageUrl: 'https://images.unsplash.com/photo-1581093583449-8255a4d1b9f9?q=80&w=2070&auto=format&fit=crop', // Fallback image for modal
+    tags: ['Kinematics', 'Rapid Prototyping', 'Mechanism Design', 'Group Work'],
+    imageUrl: 'https://drive.google.com/file/d/1Pt6F1xSWGnlqztcPwl8nawvdAtWYsLxx/preview',
     year: '2024',
     category: 'Design',
     videoUrl: 'https://drive.google.com/file/d/1Pt6F1xSWGnlqztcPwl8nawvdAtWYsLxx/preview',
@@ -20,14 +20,27 @@ export const PROJECTS: Project[] = [
     useVideoAsCover: false
   },
   {
+    id: '6',
+    title: 'Workspace Design and Engineering Visualization',
+    description: '3D modeling and visualization of a functional engineering workspace environment.',
+    longDescription: 'Designed and visualized a comprehensive engineering workspace tailored for efficiency and ergonomics. This project involved creating detailed 3D models of the environment to simulate spatial flow and equipment placement. Produced a complete set of engineering drawings to verify dimensions and assembly requirements, demonstrating strong capabilities in CAD visualization and technical documentation.',
+    tags: ['CAD', 'Visualization', 'Ergonomics', 'Space Planning'],
+    imageUrl: '', 
+    year: '2025',
+    category: 'Design',
+    coverUrl: 'https://drive.google.com/file/d/1VDPneO6JxKnnHovFpyU710-aUwXb4yq4/preview',
+    drawingsUrl: 'https://drive.google.com/file/d/1vLBDfivUArSb0peBZpEByZ5FLnesQEhn/preview'
+  },
+  {
     id: '1',
-    title: 'Pedal-Powered Alternator',
+    title: 'Pedal-Powered Alternator Generator',
     description: 'Designed and engineered a pedal-powered generator producing stable electrical output.',
     longDescription: 'Secured $1,400 in funding from Conservation Corps Newfoundland and Labrador (CCNL) by drafting a detailed technical proposal. Engineered the system using a custom bicycle drivetrain and alternator. Developed safety features including guarded moving parts, secure mounting, and insulated wiring for classroom demonstrations.',
     tags: ['Prototyping', 'Grant Writing', 'Safety Design', 'Energy Conversion'],
-    imageUrl: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '',
     year: '2024',
-    category: 'Manufacturing'
+    category: 'Manufacturing',
+    coverUrl: 'https://drive.google.com/file/d/1ZMhNUij-uMbhWKU1rAnc7w7mUIFSuEmN/preview'
   },
   {
     id: '2',
@@ -39,7 +52,7 @@ export const PROJECTS: Project[] = [
     year: '2025',
     category: 'Kinematic Analysis',
     pdfUrl: 'https://drive.google.com/file/d/19IU06kO_iwQBKiUFL4mjTJFc4YLfIfCk/view',
-    coverUrl: 'https://images.unsplash.com/photo-1505562092285-b924c5b3c375?q=80&w=2070&auto=format&fit=crop'
+    coverUrl: 'https://drive.google.com/file/d/1leUKH9YU4uGBKEaidCp6Pky4YUAzjhLh/preview'
   },
   {
     id: '3',
@@ -60,9 +73,75 @@ export const PROJECTS: Project[] = [
     longDescription: 'Produced a comprehensive 31-page guidebook standardizing Non-Destructive Testing (NDT) techniques including MPT, DPT, UT, and RT. This resource consolidated inspection scopes and technical guidelines to ensure regulatory compliance, support maintenance planning, and verify structural integrity of critical equipment.',
     tags: ['Technical Writing', 'NDT', 'Standardization', 'Quality Control'],
     imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop',
-    year: '2023',
+    year: '2025',
     category: 'Manufacturing',
     pdfUrl: 'https://drive.google.com/file/d/1GqSScp1FtQzUbp3Ch9VgRcNsI3I8i5hm/view'
+  }
+];
+
+export const MAKE_AND_TAKES: MakeAndTakeItem[] = [
+  {
+    id: 'mt2',
+    title: 'Assembly Detail',
+    description: 'Close-up view of mechanical assembly.',
+    imageUrl: 'https://drive.google.com/file/d/10lhwoVaWLUjPBspS62mHqPozDMnD3Y_M/preview',
+    tags: ['Assembly', 'Mechanical']
+  },
+  {
+    id: 'mt3',
+    title: 'Component Fit',
+    description: 'Testing fit tolerances on custom parts.',
+    imageUrl: 'https://drive.google.com/file/d/1XlsYfLFhjLOELbEII4gE_NlXnz4KpUPT/preview',
+    tags: ['Tolerancing', 'Fitting']
+  },
+  {
+    id: 'mt4',
+    title: 'Material Prep',
+    description: 'Raw materials prepped for machining.',
+    imageUrl: 'https://drive.google.com/file/d/14YXVYF6zSxtrj57p6wSSICU-IjqaRwEZ/preview',
+    tags: ['Materials', 'Prep']
+  },
+  {
+    id: 'mt5',
+    title: 'Design Iteration',
+    description: 'Mid-process design modification.',
+    imageUrl: 'https://drive.google.com/file/d/1uILrlOg369OZ3DbjkpKbQk2C1Z2m4Gss/preview',
+    tags: ['Iteration', 'Design']
+  },
+  {
+    id: 'mt6',
+    title: 'Frame Construction',
+    description: 'Building the structural support system.',
+    imageUrl: 'https://drive.google.com/file/d/1DhBZCNsxKRX5URu6LPya3zkeyE_MvciT/preview',
+    tags: ['Structure', 'Build']
+  },
+  {
+    id: 'mt7',
+    title: 'Linkage Test',
+    description: 'Initial motion test of linkages.',
+    imageUrl: 'https://drive.google.com/file/d/1Ry-RSXuDnQxcvNVeSglzGi-bEM5UvAYX/preview',
+    tags: ['Testing', 'Kinematics']
+  },
+  {
+    id: 'mt8',
+    title: 'Workshop View',
+    description: 'Current workspace setup and tools.',
+    imageUrl: 'https://drive.google.com/file/d/1KaBm2sdcMIuaaeKnbrPCdLLn2LRo1Nw0/preview',
+    tags: ['Workshop', 'Tools']
+  },
+  {
+    id: 'mt9',
+    title: 'Finishing Touches',
+    description: 'Surface finishing and polishing.',
+    imageUrl: 'https://drive.google.com/file/d/1srqQm_zI5A9v1r6Y-pQUOMgndoNojBcx/preview',
+    tags: ['Finishing', 'Detail']
+  },
+  {
+    id: 'mt10',
+    title: 'Final Assembly',
+    description: 'Completed assembly ready for review.',
+    imageUrl: 'https://drive.google.com/file/d/1g1JUyU1oS4FqyakEL2u7Q9AC6Tsv_kgu/preview',
+    tags: ['Final', 'Complete']
   }
 ];
 

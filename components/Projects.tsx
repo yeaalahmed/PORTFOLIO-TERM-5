@@ -7,11 +7,22 @@ const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-12 bg-white border-t-4 border-black">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="py-20 px-4 md:px-12 bg-retro-teal border-t-4 border-black relative overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-10 pointer-events-none" 
+        style={{ 
+          backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', 
+          backgroundSize: '20px 20px' 
+        }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex items-center gap-4 mb-16">
           <div className="h-4 w-4 bg-black"></div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold">SELECTED WORKS</h2>
+          <h2 className="font-serif text-5xl md:text-6xl font-bold bg-white px-4 py-1 border-4 border-black shadow-retro">
+            SELECTED WORKS
+          </h2>
           <div className="flex-grow h-1 bg-black"></div>
         </div>
 
@@ -155,6 +166,20 @@ const Projects: React.FC = () => {
                     </a>
                   </div>
                 )}
+                
+                {selectedProject.drawingsUrl && (
+                  <div className="py-2">
+                    <a 
+                      href={selectedProject.drawingsUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-3 bg-retro-yellow border-2 border-black font-mono font-bold text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all"
+                    >
+                      <FileText className="w-4 h-4" />
+                      VIEW DRAWINGS
+                    </a>
+                  </div>
+                )}
 
                 <div className="space-y-2 pt-2">
                     <h4 className="font-bold font-serif text-lg">Tech Stack:</h4>
@@ -169,7 +194,7 @@ const Projects: React.FC = () => {
               </div>
 
               <div className="border-t-4 md:border-t-0 md:border-l-4 border-black bg-gray-100 p-8 flex flex-col items-center justify-center gap-4">
-                <div className="w-full aspect-square border-4 border-black bg-white p-2 shadow-retro transform rotate-1">
+                <div className={`w-full ${selectedProject.id === '5' ? 'aspect-[9/16]' : 'aspect-video'} border-4 border-black bg-white p-2 shadow-retro transform rotate-1`}>
                     {/* Render Cover URL or Image in the modal sidebar */}
                     {selectedProject.coverUrl ? (
                          <iframe 
@@ -186,13 +211,15 @@ const Projects: React.FC = () => {
                         />
                     )}
                 </div>
-                <div className="w-full aspect-video border-4 border-black bg-white p-2 shadow-retro transform -rotate-2 mt-4">
-                    <img 
-                        src={`https://picsum.photos/600/400?random=${selectedProject.id}99`} 
-                        alt="Diagram"
-                        className="w-full h-full object-cover grayscale opacity-80" 
-                    />
-                </div>
+                {selectedProject.id !== '5' && selectedProject.id !== '3' && selectedProject.id !== '4' && selectedProject.id !== '6' && selectedProject.id !== '2' && (
+                    <div className="w-full aspect-video border-4 border-black bg-white p-2 shadow-retro transform -rotate-2 mt-4">
+                        <img 
+                            src={`https://picsum.photos/600/400?random=${selectedProject.id}99`} 
+                            alt="Diagram"
+                            className="w-full h-full object-cover grayscale opacity-80" 
+                        />
+                    </div>
+                )}
               </div>
             </div>
           </div>

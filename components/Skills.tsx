@@ -8,13 +8,19 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 px-4 md:px-12 bg-retro-teal/20 border-t-4 border-black">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-between mb-16 flex-wrap gap-4">
+        <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
           <h2 className="font-serif text-5xl font-bold bg-white px-4 border-4 border-black shadow-retro inline-block transform -rotate-1">
             TECHNICAL ARSENAL
           </h2>
           <div className="bg-black text-white font-mono px-4 py-2 text-sm">
             // COMPETENCY MATRIX
           </div>
+        </div>
+
+        <div className="mb-12">
+            <p className="font-mono text-xs md:text-sm text-vintage-black bg-yellow-200 border-2 border-black p-3 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-1">
+            * Disclaimer: This section is for aesthetic purposes only; the data provided is not functional or significant.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -32,7 +38,7 @@ const Skills: React.FC = () => {
                     </div>
                     <div className="h-4 w-full border-2 border-black p-0.5 bg-vintage-cream">
                       <div 
-                        className="h-full bg-retro-orange border-r-2 border-black repeating-linear-gradient"
+                        className="h-full bg-retro-orange border-r-2 border-black"
                         style={{ 
                           width: `${skill.level}%`,
                           backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.1) 5px, rgba(0,0,0,0.1) 10px)'

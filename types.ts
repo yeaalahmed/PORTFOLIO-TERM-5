@@ -11,6 +11,15 @@ export interface Project {
   videoUrl?: string;
   coverUrl?: string;
   useVideoAsCover?: boolean;
+  drawingsUrl?: string;
+}
+
+export interface MakeAndTakeItem {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  tags: string[];
 }
 
 export interface Skill {
